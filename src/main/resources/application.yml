@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5434/nto_individual}
+    username: ${DB_USER:nto}
+    password: ${DB_PASSWORD:nto}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  sql:
+    init:
+      mode: never
+  liquibase:
+    change-log: classpath:db/changelog/master.yaml
+  jackson:
+    default-property-inclusion: always
+    serialization:
+      write-dates-as-timestamps: false

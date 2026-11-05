@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: docker.io/library/postgres:17.10
+    environment:
+      POSTGRES_DB: nto_individual
+      POSTGRES_USER: nto
+      POSTGRES_PASSWORD: nto
+    ports:
+      - "127.0.0.1:5434:5432"
+    volumes:
+      - individual_pg:/var/lib/postgresql/data
+volumes:
+  individual_pg:

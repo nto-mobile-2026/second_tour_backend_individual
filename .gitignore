@@ -1,0 +1,7 @@
+.gradle/
+**/build/
+.kotlin/
+
+# Ready libraries are part of the participant starter, not generated output.
+!libs/encoder-obf.jar
+!libs/verifier-obf.jar
